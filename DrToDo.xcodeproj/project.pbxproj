@@ -10,6 +10,7 @@
 		0635E93139E4D05AD245BFB0 /* Pods_DrToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A89C5C8BF710FF2C0972A60 /* Pods_DrToDo.framework */; };
 		C4736257207E076200AC5260 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4736256207E076200AC5260 /* Item.swift */; };
 		C4736259207E077700AC5260 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4736258207E077700AC5260 /* Category.swift */; };
+		C473625B207E2AF500AC5260 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473625A207E2AF500AC5260 /* SwipeTableViewController.swift */; };
 		C4906CBE207A2EA5006F45E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4906CBD207A2EA5006F45E9 /* AppDelegate.swift */; };
 		C4906CC0207A2EA5006F45E9 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4906CBF207A2EA5006F45E9 /* TodoListViewController.swift */; };
 		C4906CC3207A2EA5006F45E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4906CC1207A2EA5006F45E9 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		B0A29F3001E2E8DE7FB15333 /* Pods-DrToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrToDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrToDo/Pods-DrToDo.release.xcconfig"; sourceTree = "<group>"; };
 		C4736256207E076200AC5260 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		C4736258207E077700AC5260 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C473625A207E2AF500AC5260 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		C4906CBA207A2EA5006F45E9 /* DrToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4906CBD207A2EA5006F45E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4906CBF207A2EA5006F45E9 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		C4E07CEB207A669100AE0ED1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C473625A207E2AF500AC5260 /* SwipeTableViewController.swift */,
 				C4B3D2A3207D047600B2AB74 /* CategoryViewController.swift */,
 				C4906CBF207A2EA5006F45E9 /* TodoListViewController.swift */,
 			);
@@ -224,11 +227,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-DrToDo/Pods-DrToDo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -264,6 +269,7 @@
 				C4B3D2A4207D047600B2AB74 /* CategoryViewController.swift in Sources */,
 				C4906CC0207A2EA5006F45E9 /* TodoListViewController.swift in Sources */,
 				C4906CBE207A2EA5006F45E9 /* AppDelegate.swift in Sources */,
+				C473625B207E2AF500AC5260 /* SwipeTableViewController.swift in Sources */,
 				C4736259207E077700AC5260 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

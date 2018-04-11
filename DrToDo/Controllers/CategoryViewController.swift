@@ -8,8 +8,9 @@
 
 import UIKit
 import RealmSwift
+import SwipeCellKit
 
-class CategoryViewController: UITableViewController {
+class CategoryViewController: SwipeTableViewController {
     let realm = try! Realm()
     
     var categories: Results<Category>?
@@ -18,11 +19,8 @@ class CategoryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.load()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.tableView.rowHeight = 80.0
+        
     }
 
     
@@ -32,8 +30,9 @@ class CategoryViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as UITableViewCell
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         cell.textLabel?.text = self.categories?[indexPath.row].name ?? "No Categories added yet"
+        
         return cell
     }
     
@@ -74,6 +73,21 @@ class CategoryViewController: UITableViewController {
         
     }
     
+    //MARK: - Delete Data from Swipe
+    
+    override func updateModel(at indexPath: IndexPath) {
+        
+        if let category  = self.categories?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(category)
+                }
+            } catch {
+                print("error deleting \(error)")
+            }
+        }
+    }
+    
     //MARK: - Add New Categories
     
     @IBAction func addButtonPressed(_ sender: Any) {
@@ -97,3 +111,4 @@ class CategoryViewController: UITableViewController {
     
     
 }
+
