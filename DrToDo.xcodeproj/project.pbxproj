@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0635E93139E4D05AD245BFB0 /* Pods_DrToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A89C5C8BF710FF2C0972A60 /* Pods_DrToDo.framework */; };
 		C4906CBE207A2EA5006F45E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4906CBD207A2EA5006F45E9 /* AppDelegate.swift */; };
 		C4906CC0207A2EA5006F45E9 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4906CBF207A2EA5006F45E9 /* TodoListViewController.swift */; };
 		C4906CC3207A2EA5006F45E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4906CC1207A2EA5006F45E9 /* Main.storyboard */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A89C5C8BF710FF2C0972A60 /* Pods_DrToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6727A5D0256809C2C73ED18D /* Pods-DrToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrToDo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrToDo/Pods-DrToDo.debug.xcconfig"; sourceTree = "<group>"; };
+		B0A29F3001E2E8DE7FB15333 /* Pods-DrToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrToDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrToDo/Pods-DrToDo.release.xcconfig"; sourceTree = "<group>"; };
 		C4906CBA207A2EA5006F45E9 /* DrToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4906CBD207A2EA5006F45E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4906CBF207A2EA5006F45E9 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0635E93139E4D05AD245BFB0 /* Pods_DrToDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40F7E9E880807BA065D38C3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6727A5D0256809C2C73ED18D /* Pods-DrToDo.debug.xcconfig */,
+				B0A29F3001E2E8DE7FB15333 /* Pods-DrToDo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		450339863B663CBF24D107D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A89C5C8BF710FF2C0972A60 /* Pods_DrToDo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C4906CB1207A2EA5006F45E9 = {
 			isa = PBXGroup;
 			children = (
 				C4906CBC207A2EA5006F45E9 /* DrToDo */,
 				C4906CBB207A2EA5006F45E9 /* Products */,
+				40F7E9E880807BA065D38C3E /* Pods */,
+				450339863B663CBF24D107D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4906CCC207A2EA5006F45E9 /* Build configuration list for PBXNativeTarget "DrToDo" */;
 			buildPhases = (
+				9AE977438A3D72E1A757F5FF /* [CP] Check Pods Manifest.lock */,
 				C4906CB6207A2EA5006F45E9 /* Sources */,
 				C4906CB7207A2EA5006F45E9 /* Frameworks */,
 				C4906CB8207A2EA5006F45E9 /* Resources */,
+				669A571909A2A39521904FC6 /* [CP] Embed Pods Frameworks */,
+				03058C88BCE95F16D8DEFD8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +195,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03058C88BCE95F16D8DEFD8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrToDo/Pods-DrToDo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		669A571909A2A39521904FC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DrToDo/Pods-DrToDo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrToDo/Pods-DrToDo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AE977438A3D72E1A757F5FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DrToDo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C4906CB6207A2EA5006F45E9 /* Sources */ = {
@@ -312,6 +395,7 @@
 		};
 		C4906CCD207A2EA5006F45E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6727A5D0256809C2C73ED18D /* Pods-DrToDo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +411,7 @@
 		};
 		C4906CCE207A2EA5006F45E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0A29F3001E2E8DE7FB15333 /* Pods-DrToDo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
